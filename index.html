@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McLaren F1 — Fã-Clube &amp; Simulador de Estratégia</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">MCL</span>
+        <div>
+          <p class="brand-title">McLaren Racing Hub</p>
+          <p class="brand-subtitle">Engenharia, Velocidade e Estratégia de Pista</p>
+        </div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#pilares">Destaques</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Fã-Clube &amp; Análise Técnica</p>
+          <h1>Paixão pela McLaren e precisão em cada volta</h1>
+          <p class="lead">
+            Fundada em 1963 por Bruce McLaren, a escuderia combina inovação aerodinâmica,
+            trabalho de equipa e decisões rápidas no pit wall para lutar por vitórias em
+            circuitos de todo o mundo.
+          </p>
+          <a href="#simulador" class="btn-primary">Calcular Estratégia de Combustível</a>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="img/McLaren1.jpg"
+            alt="mclaren monoposto de Fórmula 1, com pintura laranja"
+          />
+          <figcaption>Exemplo ilustrativo — identifica a origem real da imagem no README.md.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="pilares" class="section">
+      <div class="container">
+        <h2>Por que acompanhar a McLaren?</h2>
+        <p class="section-intro">
+          Três pilares marcam a identidade da equipa dentro e fora das pistas:
+        </p>
+        <ul class="feature-list">
+          <li class="feature-card">
+            <h3>Tradição no Automobilismo</h3>
+            <p>
+              Décadas de história na Fórmula 1 e noutras categorias, com títulos mundiais
+              e pilotos icónicos ao volante.
+            </p>
+          </li>
+          <li class="feature-card">
+            <h3>Engenharia e Aerodinâmica</h3>
+            <p>
+              Desenvolvimento contínuo em túnel de vento, simulação e materiais leves para
+              maximizar aderência e velocidade em reta.
+            </p>
+          </li>
+          <li class="feature-card">
+            <h3>Estratégia em Tempo Real</h3>
+            <p>
+              Leitura de desgaste de pneus, ritmo de corrida e janelas de paragem nas boxes
+              para ganhar posições decisivas.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="simulador" class="section section-alt">
+      <div class="container">
+        <h2>Simulador de Combustível para Corrida</h2>
+        <p class="section-intro">
+          Indica o nome da tua simulação, o número de voltas restantes e o consumo médio
+          por volta (em litros) para calcular o combustível necessário (com margem de segurança de 5%).
+        </p>
+
+        <form id="fuel-form" class="simulator-form" novalidate>
+          <div class="form-group">
+            <label for="sessao-nome">Identificação da sessão ou piloto</label>
+            <input
+              type="text"
+              id="sessao-nome"
+              name="sessaoNome"
+              placeholder="Ex.: Treino Interlagos - Volta Rápida"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="voltas">Número de voltas (1 a 100)</label>
+              <input
+                type="number"
+                id="voltas"
+                name="voltas"
+                step="1"
+                min="1"
+                max="100"
+                placeholder="Ex.: 25"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="consumo">Consumo por volta em litros (0,5 a 10,0)</label>
+              <input
+                type="number"
+                id="consumo"
+                name="consumo"
+                step="0.1"
+                min="0.5"
+                max="10"
+                placeholder="Ex.: 1.8"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary">Calcular Combustível</button>
+
+          <div
+            id="resultado-box"
+            class="feedback-box"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Projeto académico — McLaren Racing Hub (HTML, CSS e JavaScript).</p>
+      <p class="footer-note">Conteúdo educacional sem vínculo oficial com a McLaren Racing Ltd.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
